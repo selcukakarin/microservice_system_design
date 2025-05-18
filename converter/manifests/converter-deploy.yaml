@@ -29,10 +29,19 @@ spec:
               memory: "256Mi"
               cpu: "500m"
           env:
-            - name: LOG_LEVEL
-              value: "DEBUG"
+            - name: FLASK_DEBUG
+              value: "1"
+            - name: RABBITMQ_HEARTBEAT
+              value: "120"  # Artırılmış heartbeat değeri
           envFrom:
             - configMapRef:
                 name: converter-configmap
             - secretRef:
                 name: converter-secret
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"

@@ -24,8 +24,17 @@ spec:
           env:
             - name: FLASK_DEBUG
               value: "1"
+            - name: RABBITMQ_HEARTBEAT
+              value: "120"  # Artırılmış heartbeat değeri
           envFrom:
             - configMapRef:
                 name: gateway-configmap
             - secretRef:
                 name: gateway-secret
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
