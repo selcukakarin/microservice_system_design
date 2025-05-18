@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: converter
+  labels:
+    app: converter
+spec:
+  replicas: 4  # Başlangıçta daha az replika ile test edelim
+  selector:
+    matchLabels:
+      app: converter
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 8
+  template:
+    metadata:
+      labels:
+        app: converter
+    spec:
+      containers:
+        - name: converter
+          image: selcukakarin/converter:latest  # latest etiketini ekledim
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          env:
+            - name: LOG_LEVEL
+              value: "DEBUG"
+          envFrom:
+            - configMapRef:
+                name: converter-configmap
+            - secretRef:
+                name: converter-secret

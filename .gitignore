@@ -1,0 +1,106 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+.env/
+.venv/
+venv/
+ENV/
+env/
+*.env
+*.venv
+Pipfile.lock
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+instance/
+settings_local.py
+
+# Flask specific
+instance/
+*.db
+*.sqlite
+*.log
+
+# MongoDB (if storing dumps or local DB files)
+dump/
+*.bson
+*.ns
+*.wt
+*.wtlog
+*.snappy
+
+# RabbitMQ (if storing any local logs or PID files)
+rabbitmq.log
+rabbitmq.pid
+
+# PyInstaller
+*.manifest
+*.spec
+dist/
+build/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+*.sock
+__docker__/
+
+# Logs
+*.log
+logs/
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.idea/
+*.iml
+
+# Others
+*.bak
+*.swp
