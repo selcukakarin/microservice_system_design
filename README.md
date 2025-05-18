@@ -1,11 +1,4 @@
-I'll create a README.md file for the src directory to document your microservices project.
-To create a README.md file in your src directory, you'd typically do this:
-1. Navigate to your src directory
-2. Create a new file named README.md
-3. Add the documentation content to it
 
-Here's the content for your README.md file:
-``` markdown
 # MP3 Converter Microservice
 
 This document provides detailed guidance on setting up, deploying, and using the MP3 Converter Microservice application built with Python, Docker, and Kubernetes.
